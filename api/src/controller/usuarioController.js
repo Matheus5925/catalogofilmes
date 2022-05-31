@@ -7,12 +7,16 @@ server.post('/usuario/login', async (req, resp) =>{
     try {
         const {email, senha} = req.body;
         const resposta = await Login(email, senha);
+        if (!resposta) {
+            throw new Error('Credenciais inválida')
+        }
         resp.send(resposta)
 
     } catch (err) {
-        resp.status(400).send({
-            err: 'Ocorreu um erro'
-        })
+        resp.status(401).send({
+            erro: err.message
+        });
     }
+});
 
-})
+export default server;

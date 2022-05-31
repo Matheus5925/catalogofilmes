@@ -35,9 +35,19 @@ response (200)
     "avaliacao": 0.0,
     "lancamento": '2010-01-01',
     "disponivel": true,
-    "imagem": '',
     "usuario": 0
 }
+
+
+(2.1)/PUT     /filme/:id/imagem
+request body( form )
+{
+    "imagem": ''
+}
+response(204)
+-- sem conteudo
+
+
 
 (3)/PUT   /filme/:id
 
