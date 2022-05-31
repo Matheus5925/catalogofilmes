@@ -1,0 +1,102 @@
+
+
+(1)/POST  /usuario/login
+
+request body
+{
+    "email": '',
+    "senha": ''
+}
+
+response(200)
+{
+    "id": 0,
+    "email": '',
+    "nome": ''
+}
+
+(2)/POST      /filme/
+request body
+{
+    "nome": '',
+    "sinopse": '',
+    "avaliacao": 0.0,
+    "lancamento": '2010-01-01',
+    "disponivel": true,
+    "imagem": '',
+    "usuario": 0
+}
+
+response (200)
+{
+    "id": 0,
+    "nome": '',
+    "sinopse": '',
+    "avaliacao": 0.0,
+    "lancamento": '2010-01-01',
+    "disponivel": true,
+    "imagem": '',
+    "usuario": 0
+}
+
+(3)/PUT   /filme/:id
+
+request body
+{
+    "nome": '',
+    "sinopse": '',
+    "avaliacao": 0.0,
+    "lancamento": '2010-01-01',
+    "disponivel": true,
+    "imagem": '',
+    "usuario": 0
+}
+
+response (204)
+-- sem conteudo
+
+
+(4)/DELETE      /filme/:id
+
+response (204)
+-- sem conteudo
+
+
+(5)/GET         /filme
+request
+[
+    {
+        "nome": '',
+        "avaliacao": 0.0,
+        "lancamento": '2010-01-01',
+        "disponivel": true,
+        "usuario": 0
+    }
+]
+
+(6)/GET         /filme/:nome
+response
+[
+    {
+        "nome": '',
+        "avaliacao": 0.0,
+        "lancamento": '2010-01-01',
+        "disponivel": true,
+        "usuario": 0
+    }
+]
+
+
+(6)/GET         /filme/:id
+response
+[
+    {
+        "nome": ''
+        "sinopse": '',
+        "avaliacao": 0.0,
+        "lancamento": '2010-01-01',
+        "disponivel": true,
+        "imagem": '',
+        "usuario": 0
+    }
+]
